@@ -1,0 +1,113 @@
+/* --- Общие стили --- */
+body {
+  margin: 0;
+  background: #1a1a1a;
+  color: #eee;
+  font-family: sans-serif;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+.main-nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.season-grid {
+  margin-top: 40px;  /* добавляем отступ сверху */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.season-item {
+  text-align: center;
+}
+.season-item img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;    /* ещё раз центрируем внутри item */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav__link {
+  color: #ccc;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav__link.active,
+.nav__link:hover {
+  color: #fff;
+}
+
+.nav-icons img {
+  width: 37px;
+  height: 37px;        /* явно задаём одинаковую высоту */
+  margin-left: 15px;
+  object-fit: contain; /* впишет изображение в бокс, сохранив пропорции */
+}
+
+
+.season-item .caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #eee;
+}
+
+.highlight {
+  margin-top: 0.1rem; /* пол-ре́ма от хедера */
+}
+/* Заголовок в левом нижнем углу */
+.highlight-title {
+  position: absolute;
+  left: 20px;
+  bottom: 13cm;
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;         /* тянется ровно под ширину родителя */
+  max-width: 100%;     /* не больше экрана */
+  height: 1000px;       /* ваша фиксированная высота */
+  overflow: hidden;    /* прячет всё, что выходит за рамки */
+  margin: 0 auto;      /* по центру, без отрицательных маргинов */
+}
+
+/* Картинка с кросс-фейдом */
+#carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
